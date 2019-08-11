@@ -7,7 +7,7 @@ function loadPictures(maxImagesToLoad) {
     var indexLimit = lastPictureIndexShown + imagesToLoad;
     for (var i = lastPictureIndexShown; i < indexLimit; i++) {
         var image = images[i];
-        var element = '<div class="col-4 my-work-image" style="cursor: pointer;"><span class="image fit"><img src="images/fulls/'+image.name+'" alt="" onclick="openModal('+i+')"/></span></div>';
+        var element = '<div class="col-4 my-work-image" style="cursor: pointer;"><span class="image fit"><img src="images/fulls/'+image.name+'" alt="" onclick="openModal('+i+')" style="max-height: 450px"/></span></div>';
         $(element).insertBefore( $("#empty-spot") );
     }
     if ($('.my-work-image').length === totalAmountOfPictures) {
